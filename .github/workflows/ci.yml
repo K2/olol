@@ -67,7 +67,8 @@ jobs:
       run: |
         uv venv -p 3.12
         source .venv/bin/activate
-        uv pip install grpcio-tools --system
+        uv pip install grpcio-tools --active
+        uv pip install grpc-tools --active
         uv build
         tools/build-simple.sh
 
